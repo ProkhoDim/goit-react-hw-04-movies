@@ -79,4 +79,12 @@ export default {
       }))
       .slice(0, 20);
   },
+
+  getPosterSrc(posterId) {
+    return `https://image.tmdb.org/t/p/w500/${posterId}`;
+  },
+
+  getAvatarSrc(avatarId) {
+    return `https://image.tmdb.org/t/p/w185/${avatarId}`;
+  },
 };

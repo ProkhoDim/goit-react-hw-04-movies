@@ -15,7 +15,7 @@ class Cast extends Component {
         {this.state.actors.map(({ cast_id, character, name, profile_path }) => (
           <li key={cast_id} className="castList_item">
             <img
-              src={`https://image.tmdb.org/t/p/w185/${profile_path}`}
+              src={apiServices.getAvatarSrc(profile_path)}
               alt={name}
               className="castList_avatar"
             />

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import apiServices from '../services/apiServices';
 
 const MovieDetails = ({
   props: { title, overview, release_date, genres, vote_average, poster_path },
@@ -7,7 +8,7 @@ const MovieDetails = ({
   return (
     <div className="MovieDetails">
       <img
-        src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+        src={apiServices.getPosterSrc(poster_path)}
         alt={title}
         className="MovieDetails_poster"
       />
